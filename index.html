@@ -1,0 +1,25 @@
+<html ng-app="ServiseApp">
+
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-aria/angular-aria.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.js"></script>
+    <script src="node_modules/angular-material/angular-material.js"></script>
+    <script src="js/main.controller.js"></script>
+</head>
+
+<body ng-controller="MainController as ctrl">
+    <md-toolbar>
+        <h3 style="margin-left:1%">Kompiuterių remonto serviso sistema</h3>
+    </md-toolbar>
+    <md-nav-bar flex md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+        <md-nav-item name='index' aria-label="nzn">Pagrindinis</md-nav-item>
+        <md-nav-item name='works' aria-label="nzn">Darbų eilė</md-nav-item>
+        <md-nav-item name='warehouse' aria-label="nzn">Sandėlis</md-nav-item>
+        <md-nav-item name='money' aria-label="nzn">Apskaita</md-nav-item>
+    </md-nav-bar>
+</body>
+
+</html>
