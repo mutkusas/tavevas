@@ -1,0 +1,12 @@
+<md-card ng-controller="JobsController as jctrl">
+    <h3>Darbų eilė</h3>
+    <md-divider></md-divider>
+    <md-list>
+        <md-list-item ng-repeat="job in jctrl.jobs">
+            <span>Id : {{job.Id}}</span> 
+            <span>Klientas : {{job.Client}}</span> 
+            <span>Kaina : {{job.Price}} </span>
+            <span>Statusas : {{job.Status}}</span>
+        </md-list-item>
+    </md-list>
+</md-card>

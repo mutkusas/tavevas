@@ -1,6 +1,7 @@
 <html ng-app="ServiseApp">
 
 <head>
+    <title>TVVS</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
     <script src="node_modules/angular/angular.js"></script>
@@ -8,18 +9,44 @@
     <script src="node_modules/angular-animate/angular-animate.js"></script>
     <script src="node_modules/angular-material/angular-material.js"></script>
     <script src="js/main.controller.js"></script>
+    <script src="js/warehouse.controller.js"></script>
+    <script src="js/jobs.controller.js"></script>
 </head>
 
 <body ng-controller="MainController as ctrl">
     <md-toolbar>
-        <h3 style="margin-left:1%">Kompiuterių remonto serviso sistema</h3>
+        <h3 style="margin-left:1%">Tavo verslo valdymo sistema</h3>
     </md-toolbar>
-    <md-nav-bar flex md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-        <md-nav-item name='index' aria-label="nzn">Pagrindinis</md-nav-item>
-        <md-nav-item name='works' aria-label="nzn">Darbų eilė</md-nav-item>
-        <md-nav-item name='warehouse' aria-label="nzn">Sandėlis</md-nav-item>
-        <md-nav-item name='money' aria-label="nzn">Apskaita</md-nav-item>
-    </md-nav-bar>
+    <md-tabs style="min-height:80%;max-height:100%">
+        <md-tab label='Pagrindinis'>
+            <md-divider></md-divider>
+            <md-card>
+                Cia galetu buti ivairus dashboardai susije su veiklos analize {{me.message}}
+            </md-card>
+        </md-tab style="height:100%">
+        <md-tab label='Sandėlis'>
+            <md-divider></md-divider>
+            <md-card ng-controller="WarehouseController as whctrl">
+                <h3>Sandėlis</h3>
+            </md-card>
+        </md-tab style="height:100%">
+        <md-tab label='Darbų eilė'>
+            <md-divider></md-divider>
+            <div ng-include="'templates/jobs.template.html'"></div>
+        </md-tab style="height:100%">
+        <md-tab label='Buhalteris'>
+            <md-divider></md-divider>
+            <md-card>
+                Buhalteris
+            </md-card>
+        </md-tab>
+        <md-tab label='Darbuotojai'>
+            <md-divider></md-divider>
+            <md-card>
+                Buhalteris
+            </md-card>
+        </md-tab>
+    </md-tabs>
 </body>
 
 </html>
